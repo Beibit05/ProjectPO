@@ -34,11 +34,11 @@ public class ProductService {
         return productRepository.findAll();
     }
 
-    public ProductDto saveProduct(long userId, ProductCreateRequestDto productDto, MultipartFile file1, MultipartFile file2, MultipartFile file3) throws IOException {
+    public ProductDto saveProduct(long userId, ProductCreateRequestDto productDto, MultipartFile file1) throws IOException {
         var user = userValidator.existsById(userId);
         var product = productMapper.toEntity(productDto);
         product.setUser(user);
-        product.setImages(imageService.getListImagesFromFiles(Arrays.asList(file1, file2, file3)));
+        product.setImages(imageService.getListImagesFromFiles(Arrays.asList(file1)));
         var createdProduct = productRepository.save(product);
         log.info("Saving new Product. product id: {}, user id {}",
                 createdProduct.getId(), createdProduct.getUser().getId());

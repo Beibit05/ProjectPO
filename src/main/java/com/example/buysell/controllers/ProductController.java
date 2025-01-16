@@ -7,7 +7,6 @@ import com.example.buysell.services.ProductService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -47,21 +46,25 @@ public class ProductController {
         return "product-info";
     }
 
+
     @PostMapping("/product/create")
     public String createProduct(
             @RequestParam("file1") MultipartFile file1,
-            @RequestParam("file2") MultipartFile file2,
-            @RequestParam("file3") MultipartFile file3,
-            @RequestParam("userId") long userId,
-            @ModelAttribute @Validated ProductCreateRequestDto product, // Используем @ModelAttribute для данных формы
+            @RequestParam String title,
+            @RequestParam double price,
+            @RequestParam String city,
+            @RequestParam String description,
+            @RequestParam long userId,
             Model model) throws IOException {
-
-        var createdProduct = productService.saveProduct(userId, product, file1, file2, file3);
-
-        model.addAttribute("product", createdProduct);
-
+        if (title.isEmpty() || price <= 0) {
+            model.addAttribute("error", "Invalid product data");
+            return "redirect:/my/products";
+        }
+        productService.saveProduct(userId, new ProductCreateRequestDto(title, price, city, description), file1);
         return "redirect:/my/products";
     }
+
+
 
 
 

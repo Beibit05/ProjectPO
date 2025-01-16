@@ -57,14 +57,6 @@
                 <label for="file1">Первая фотография</label>
                 <input required type="file" class="form-control" name="file1" id="file1">
             </div>
-            <div class="form-group">
-                <label for="file2">Вторая фотография</label>
-                <input type="file" class="form-control" name="file2" id="file2">
-            </div>
-            <div class="form-group">
-                <label for="file3">Третья фотография</label>
-                <input type="file" class="form-control" name="file3" id="file3">
-            </div>
 
             <!-- CSRF токен -->
             <input type="hidden" name="_csrf" th:value="${_csrf.token}">
@@ -81,14 +73,14 @@
                 <div class="card text-white bg-dark my-3 product">
                     <div class="card-top">
                         <!-- Форма для удаления товара -->
-                        <form th:action="/product/delete/{id}" method="post" style="display:inline;">
+                        <form th:action="@{/product/delete/{id}(id=${product.id})}" method="post" style="display:inline;">
                             <input type="hidden" name="_csrf" th:value="${_csrf.token}">
                             <!-- Добавляем скрытое поле для имитации метода DELETE -->
                             <input type="hidden" name="_method" value="DELETE">
                             <button type="submit" class="btn btn-danger m-3">Удалить</button>
                         </form>
                     </div>
-                    <img th:src="@{/images/{id}(id=${product.previewImageId})}" class="card-img-top">
+                    <img th:src="@{/images/{id}(id=${product.previewImageId})}" class="card-img-top" alt="Product Image">
                     <div class="card-body">
                         <h5 class="card-title" th:text="${product.title}"></h5>
                         <p class="card-text" th:text="${product.price} + ' ₽'"></p>

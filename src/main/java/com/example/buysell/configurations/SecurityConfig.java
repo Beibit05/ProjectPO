@@ -24,7 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .authorizeRequests()
                 // Разрешаем доступ всем пользователям
-                .antMatchers("/", "/product/**", "/images/**", "/registration", "/user/**", "/static/**", "/login", "/error")
+                .antMatchers("/", "/product/**", "/images/**", "/registration", "/user/**", "/static/**", "/login", "/error", "/my-products")
                 .permitAll()
                 // Для маршрута "Мои товары" разрешаем доступ только авторизованным пользователям
                 .antMatchers("/my/products").authenticated()

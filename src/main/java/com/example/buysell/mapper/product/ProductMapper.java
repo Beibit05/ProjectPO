@@ -15,3 +15,4 @@ public interface ProductMapper {
 
     Product toEntity(ProductCreateRequestDto productDto);
 }
+
