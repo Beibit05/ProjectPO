@@ -20,4 +20,7 @@ public class ProductCreateRequestDto {
     private Integer price;
     @NotNull
     private String city;
+
+    public ProductCreateRequestDto(String title, double price, String city, String description) {
+    }
 }
