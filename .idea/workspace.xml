@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="43350ec6-72ca-4512-9bc5-d736adebca8c" name="Changes" comment="Commit Mapper">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buysell/configurations/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buysell/configurations/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buysell/controllers/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buysell/controllers/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buysell/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buysell/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buysell/dto/product/ProductCreateRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buysell/dto/product/ProductCreateRequestDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buysell/dto/product/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buysell/dto/product/ProductDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buysell/mapper/product/ProductMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buysell/mapper/product/ProductMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buysell/repositories/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buysell/repositories/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/buysell/services/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/buysell/services/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/avatar.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/images/file1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/my-products.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/my-products.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/navBar.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/navBar.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/product-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/product-info.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/user-info.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/user-info.html" afterDir="false" />
-    </list>
+    <list default="true" id="43350ec6-72ca-4512-9bc5-d736adebca8c" name="Changes" comment="Commit Mapper1" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -189,7 +170,7 @@
       <workItem from="1736853258876" duration="6079000" />
       <workItem from="1736936482061" duration="7991000" />
       <workItem from="1737007202253" duration="752000" />
-      <workItem from="1737012404992" duration="1912000" />
+      <workItem from="1737012404992" duration="2235000" />
     </task>
     <task id="LOCAL-00001" summary="Commit Mapper">
       <created>1736750238305</created>
@@ -230,7 +211,23 @@
       <option name="project" value="LOCAL" />
       <updated>1736879175119</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Commit Mapper1">
+      <option name="closed" value="true" />
+      <created>1737014347068</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1737014347068</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Commit Mapper1">
+      <option name="closed" value="true" />
+      <created>1737014525959</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1737014525959</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -249,7 +246,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Commit Mapper" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit Mapper" />
+    <MESSAGE value="Commit Mapper1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit Mapper1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
