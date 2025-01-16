@@ -34,6 +34,7 @@ public class ProductService {
         return productRepository.findAll();
     }
 
+
     public ProductDto saveProduct(long userId, ProductCreateRequestDto productDto, MultipartFile file1, MultipartFile file2, MultipartFile file3) throws IOException {
         var user = userValidator.existsById(userId);
         var product = productMapper.toEntity(productDto);
@@ -68,4 +69,6 @@ public class ProductService {
     public Product getProductById(Long id) {
         return productRepository.findById(id).orElse(null);
     }
+
+
 }

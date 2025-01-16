@@ -46,22 +46,32 @@ public class ProductController {
         model.addAttribute("authorProduct", product.getUser());
         return "product-info";
     }
-
-    @PostMapping("/product/create")
+    @PostMapping("/create")
     public String createProduct(
             @RequestParam("file1") MultipartFile file1,
             @RequestParam("file2") MultipartFile file2,
             @RequestParam("file3") MultipartFile file3,
-            @RequestParam("userId") long userId,
-            @ModelAttribute @Validated ProductCreateRequestDto product, // Используем @ModelAttribute для данных формы
+            @ModelAttribute @Validated ProductCreateRequestDto product,
+            Principal principal,  // Используем Principal для получения текущего пользователя
             Model model) throws IOException {
 
+        String username = principal.getName();
+        User user = productService.getUserByPrincipal(principal);
+        long userId = user.getId();
+
+        if (file1.isEmpty() || file2.isEmpty() || file3.isEmpty()) {
+            model.addAttribute("error", "Все файлы должны быть загружены.");
+            return "my-products"; // Переход к форме с ошибкой
+        }
+
+        // Создаем продукт
         var createdProduct = productService.saveProduct(userId, product, file1, file2, file3);
 
         model.addAttribute("product", createdProduct);
 
-        return "redirect:/my/products";
+        return "redirect:/my/products"; // Переход к списку товаров
     }
+
 
 
 
